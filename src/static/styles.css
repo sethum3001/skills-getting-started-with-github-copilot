@@ -79,15 +79,45 @@ section h3 {
 }
 
 .participants-list {
-  list-style: disc inside;
+  list-style: none; /* hide default bullets */
   margin: 6px 0 0 0;
-  padding-left: 1em;
+  padding-left: 0;
+  display: block;
 }
 
 .participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
   font-size: 14px;
   color: #444;
-  padding: 2px 0;
+  padding: 6px 8px;
+  border-radius: 4px;
+  background: rgba(26,35,126,0.03);
+  margin-bottom: 6px;
+}
+
+.participant-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.participant-delete {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+  transition: background-color 0.15s, transform 0.08s;
+}
+
+.participant-delete:hover {
+  background: rgba(198,40,40,0.08);
+  transform: translateY(-1px);
 }
 
 .no-participants {
